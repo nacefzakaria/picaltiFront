@@ -10,6 +10,8 @@ import NotFound from "../pages/NotFound";
 import Contact from "../pages/Contact";
 import Register from "../pages/Register";
 import Login from "../pages/login";
+import Dashboard from "../pages/Dashboard";
+import Reserve from "../pages/Reserve";
 const Routers = () => {
   return (
     <Routes>
@@ -24,6 +26,8 @@ const Routers = () => {
       <Route path="*" element={<NotFound />} />
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/reserve" element={<Reserve />} />
     </Routes>
   );
 };

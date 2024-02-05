@@ -1,0 +1,97 @@
+/* Calendar.css */
+.hour {
+    display: inline-block;
+    padding: 8px;
+    margin: 4px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .selected {
+    background-color: #4caf50; /* Green for selected hours */
+    color: white;
+  }
+  
+  .reserved {
+    background-color: #f44336; /* Red for reserved hours */
+    color: white;
+  }
+
+  /* CalendarStyles.css */
+.react-datepicker {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .react-datepicker__header {
+    background-color: #4caf50; /* Header background color */
+    color: white; /* Header text color */
+    border-bottom: none; /* Remove default border */
+  }
+  
+  .react-datepicker__current-month,
+  .react-datepicker-time__header,
+  .react-datepicker-year-header {
+    color: white; /* Header text color */
+  }
+  
+  .react-datepicker__day-names {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 8px;
+  }
+  
+  .react-datepicker__day-name,
+  .react-datepicker__day {
+    width: 2em;
+    line-height: 2em;
+    margin: 0.2em;
+    color: #333; /* Day name and day text color */
+  }
+  
+  .react-datepicker__day--selected {
+    background-color: #4caf50; /* Selected day background color */
+    color: white; /* Selected day text color */
+  }
+  
+  .react-datepicker__day--keyboard-selected {
+    background-color: #4caf50; /* Keyboard-selected day background color */
+    color: white; /* Keyboard-selected day text color */
+  }
+  
+  .react-datepicker__day--disabled {
+    color: #ccc; /* Disabled day text color */
+    cursor: not-allowed;
+  }
+  
+  .react-datepicker__month {
+    margin: 0;
+    padding: 1em;
+  }
+  
+  .react-datepicker__time-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+  }
+  
+  .react-datepicker__time-box {
+    width: 48%;
+  }
+  
+  .react-datepicker__time-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .react-datepicker__time-list-item {
+    padding: 0.5em;
+    cursor: pointer;
+  }
+  
+  .react-datepicker__time-list-item:hover {
+    background-color: #f0f0f0; /* Hovered time item background color */
+  }
+  
+  
