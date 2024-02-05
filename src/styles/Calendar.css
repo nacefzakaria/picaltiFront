@@ -1,97 +1,128 @@
-/* Calendar.css */
-.hour {
-    display: inline-block;
-    padding: 8px;
-    margin: 4px;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .selected {
-    background-color: #4caf50; /* Green for selected hours */
-    color: white;
-  }
-  
-  .reserved {
-    background-color: #f44336; /* Red for reserved hours */
-    color: white;
-  }
+/* YourStyles.css */
 
-  /* CalendarStyles.css */
-.react-datepicker {
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .react-datepicker__header {
-    background-color: #4caf50; /* Header background color */
-    color: white; /* Header text color */
-    border-bottom: none; /* Remove default border */
-  }
-  
-  .react-datepicker__current-month,
-  .react-datepicker-time__header,
-  .react-datepicker-year-header {
-    color: white; /* Header text color */
-  }
-  
-  .react-datepicker__day-names {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 8px;
-  }
-  
-  .react-datepicker__day-name,
-  .react-datepicker__day {
-    width: 2em;
-    line-height: 2em;
-    margin: 0.2em;
-    color: #333; /* Day name and day text color */
-  }
-  
-  .react-datepicker__day--selected {
-    background-color: #4caf50; /* Selected day background color */
-    color: white; /* Selected day text color */
-  }
-  
-  .react-datepicker__day--keyboard-selected {
-    background-color: #4caf50; /* Keyboard-selected day background color */
-    color: white; /* Keyboard-selected day text color */
-  }
-  
-  .react-datepicker__day--disabled {
-    color: #ccc; /* Disabled day text color */
-    cursor: not-allowed;
-  }
-  
-  .react-datepicker__month {
-    margin: 0;
-    padding: 1em;
-  }
-  
-  .react-datepicker__time-container {
+/* Styles for ReservationForm component */
+/* Add the following styles at the end of your Calendar.css file */
+
+/* Arrange hours and calendar in the same row */
+.reservation-form {
     display: flex;
     justify-content: space-between;
-    margin-top: 1em;
-  }
-  
-  .react-datepicker__time-box {
+    align-items: flex-start; /* Align items at the start of the flex container */
+    padding: 20px;
+    border: 1px solid #7c8a9736;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.calendar-container,
+.time-picker-container {
     width: 48%;
-  }
-  
-  .react-datepicker__time-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .react-datepicker__time-list-item {
-    padding: 0.5em;
+    margin-bottom: 10px; /* Add margin between calendar and hours */
+}
+
+/* Style the calendar */
+.calendar-container h2 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* Styles for react-datepicker calendar */
+.react-datepicker {
+    font-family: 'Your Font', sans-serif; /* Set font-family as needed */
+    border: 1px solid #7c8a972a; /* Border color for the calendar */
+}
+
+.react-datepicker__header {
+    background-color: #f9a826; /* Header background color */
+}
+
+.react-datepicker__day-names {
+    display: flex;
+    justify-content: space-around;
+}
+
+.react-datepicker__day-name,
+.react-datepicker__day {
+    width: 2rem; /* Adjust day width */
+    height: 2rem; /* Adjust day height */
+    line-height: 2rem; /* Adjust line-height for vertical centering */
+    margin: 0.2rem; /* Adjust margin between days */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.3rem;
+    border: 1px solid #7c8a972a; /* Border color for days */
+    background-color: #fff; /* Day background color */
+    color: #7c8a97; /* Day text color */
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.react-datepicker__day:hover {
+    background-color: #f9a826; /* Hover background color */
+    color: #fff; /* Hover text color */
+}
+
+.react-datepicker__day--selected {
+    background-color: #000d6b; /* Selected day background color */
+    color: #fff; /* Selected day text color */
+}
+
+
+/* Arrange hours in three rows */
+.time-picker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%; /* Set width to 100% to take the full width */
+}
+
+.time-picker button {
+    flex-basis: calc((100% - 20px) / 3); /* Adjust the width to fit 3 buttons in a row with spacing */
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #7c8a972a;
+    background-color: #fff;
+    color: #7c8a97;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-bottom: 10px;
+}
+
+.time-picker button:hover {
+    background-color: #f9a826;
+    color: #fff;
+}
+
+.time-picker button.selected {
+    background-color: #000d6b;
+    color: #fff;
+}
+
+/* Style the Submit Reservation button */
+.submit-button {
+    flex-basis: 100%; /* Set to full width */
+    margin-top: 10px; /* Add margin to separate button from hours */
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    background-color: #f9a826;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.submit-button-container{
+    justify-content: flex-end;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.submit-button:hover {
+    background-color: #000d6b;
+}
+/* Style reserved hours */
+.time-picker button.reserved {
+    background-color: #ffdddd; /* Set your preferred background color for reserved times */
+    color: #555; /* Set your preferred text color for reserved times */
   }
-  
-  .react-datepicker__time-list-item:hover {
-    background-color: #f0f0f0; /* Hovered time item background color */
-  }
-  
-  

@@ -19,7 +19,6 @@ const fetchData = async () => {
       automatic: item.automatic,
       description: item.description,
     }));
-
     return bikeData;
   } catch (error) {
     console.error('Error fetching bike data:', error);
