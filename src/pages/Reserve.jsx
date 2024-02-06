@@ -140,22 +140,9 @@ const handleSubmit = async () => {
 };
 
   return (
-    
+    <div>
     <div className="reservation-form">
-    <div className="message-container">
-        {reservationStatus === 'success' && (
-          <p>Your reservation has been added successfully. Redirecting to the dashboard...</p>
-        )}
-        {reservationStatus === 'insufficientFunds' && (
-          <p>Your balance is insufficient. Please <a href="/add-credits">add credits</a>.</p>
-        )}
-        {reservationStatus === 'missingSelection' && (
-          <p>Please select both date and hours.</p>
-        )}
-        {reservationStatus === 'error' && (
-          <p>Failed to submit reservation. Please try again later.</p>
-        )}
-      </div>
+   
       <div className="calendar-container">
         <h2>Select Date</h2>
         <DatePicker
@@ -186,6 +173,29 @@ const handleSubmit = async () => {
             </button>
         </div>
     </div>
+    <div className="message-container">
+    {reservationStatus === 'success' && (
+      <p style={{ color: 'green' }}>
+        Your reservation has been added successfully. Redirecting to the dashboard...
+      </p>
+    )}
+    {reservationStatus === 'insufficientFunds' && (
+      <p style={{ color: 'red' }}>
+        Your balance is insufficient. Please <a href="/add-credits">add credits</a>.
+      </p>
+    )}
+    {reservationStatus === 'missingSelection' && (
+      <p style={{ color: 'orange' }}>
+        Please select both date and hours.
+      </p>
+    )}
+    {reservationStatus === 'error' && (
+      <p style={{ color: 'red' }}>
+        Failed to submit reservation. Please try again later.
+      </p>
+    )}
+  </div>
+  </div>
   );
 };
 

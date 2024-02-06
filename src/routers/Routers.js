@@ -12,6 +12,7 @@ import Register from "../pages/Register";
 import Login from "../pages/login";
 import Dashboard from "../pages/Dashboard";
 import Reserve from "../pages/Reserve";
+import AddCredits from "../pages/addCredits";
 const Routers = () => {
   return (
     <Routes>
@@ -28,6 +29,7 @@ const Routers = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/reserve/:slug" element={<Reserve />} />
+      <Route path="/add-credits" element={<AddCredits />} />
     </Routes>
   );
 };
