@@ -1,5 +1,5 @@
 // src/assets/data/userData.js
-
+import commentImg from "../../assets/all-images/ava-1.jpg";
 const fetchUserData = async (sessionToken, userType) => {
   try {
     const formData = new FormData();
@@ -20,7 +20,8 @@ const fetchUserData = async (sessionToken, userType) => {
       email: item.email,
       firstName: item.firstName,
       lastName: item.lastName,
-      avatarUrl: item.avatarUrl,
+      avatarUrl: commentImg,
+      email: item.solde,
       // Add more fields as needed
     }));
 

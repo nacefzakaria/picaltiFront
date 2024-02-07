@@ -90,7 +90,7 @@ const ConfirmCredits = () => {
            {/* eslint-disable-next-line */}
       {error && <div className="error-message text-danger">{error}</div>}
       {/* eslint-disable-next-line */}
-      {success && <div className="success-message text-success">{success}</div>}
+      {success && <div className="success-message text-success">{success} <a href='/dashboard'>Go to the dashboard</a></div>}
           <Col lg="5" md="5">
             <div className="contact__info">
               <h6 className="fw-bold mt-4">Follow Us</h6>

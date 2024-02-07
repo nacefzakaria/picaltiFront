@@ -13,6 +13,7 @@ import Login from "../pages/login";
 import Dashboard from "../pages/Dashboard";
 import Reserve from "../pages/Reserve";
 import AddCredits from "../pages/addCredits";
+import DashAd from "../pages/DashAd";
 const Routers = () => {
   return (
     <Routes>
@@ -30,6 +31,7 @@ const Routers = () => {
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/reserve/:slug" element={<Reserve />} />
       <Route path="/add-credits" element={<AddCredits />} />
+      <Route path="/admin-dash" element={<DashAd />} />
     </Routes>
   );
 };

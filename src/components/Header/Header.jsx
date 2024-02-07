@@ -15,7 +15,7 @@ const navLinks = [
   },
   {
     path: "/cars",
-    display: "Cars",
+    display: "bikes",
   },
 
   {
@@ -106,6 +106,9 @@ const Header = () => {
                   )}
                   {/* Display the username */}
                   <span>{userProfileData[0].username}</span>
+                  <Link to="/login" className="d-flex align-items-center gap-1">
+                        <i className="ri-logout-circle-line"></i> Login
+                      </Link>
                 </div>
                 ) : (
                   // Render login and registration buttons if not logged in

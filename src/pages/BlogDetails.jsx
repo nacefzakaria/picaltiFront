@@ -49,53 +49,7 @@ const BlogDetails = () => {
                 <p className="section__description">{blog.description}</p>
               </div>
 
-              <div className="comment__list mt-5">
-                <h4 className="mb-5">3 Comments</h4>
-
-                <div className="single__comment d-flex gap-3">
-                  <img src={commentImg} alt="" />
-                  <div className="comment__content">
-                    <h6 className=" fw-bold">David Visa</h6>
-                    <p className="section__description mb-0">14 July, 2022</p>
-                    <p className="section__description">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Eos nobis totam eius laborum molestias itaque minima
-                      distinctio, quae velit tempore!
-                    </p>
-
-                    <span className="replay d-flex align-items-center gap-1">
-                      <i class="ri-reply-line"></i> Replay
-                    </span>
-                  </div>
-                </div>
-
-                {/* =============== comment form ============ */}
-                <div className="leave__comment-form mt-5">
-                  <h4>Leave a Comment</h4>
-                  <p className="section__description">
-                    You must sign-in to make or comment a post
-                  </p>
-
-                  <Form>
-                    <FormGroup className=" d-flex gap-3">
-                      <Input type="text" placeholder="Full name" />
-                      <Input type="email" placeholder="Email" />
-                    </FormGroup>
-
-                    <FormGroup>
-                      <textarea
-                        rows="5"
-                        className="w-100 py-2 px-3"
-                        placeholder="Comment..."
-                      ></textarea>
-                    </FormGroup>
-
-                    <button className="btn comment__btn mt-3">
-                      Post a Comment
-                    </button>
-                  </Form>
-                </div>
-              </div>
+              
             </Col>
 
             <Col lg="4" md="4">

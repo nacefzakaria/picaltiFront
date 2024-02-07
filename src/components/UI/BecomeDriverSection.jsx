@@ -19,7 +19,7 @@ const BecomeDriverSection = () => {
             </h2>
 
             <button className="btn become__driver-btn mt-4">
-              Become a Driver
+              Become an owner
             </button>
           </Col>
         </Row>
