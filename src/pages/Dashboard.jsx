@@ -10,12 +10,19 @@ import CarItem from "../components/UI/CarItem";
 import contactImage from '../assets/all-images/cars-img/nissan-offer.png';
 import userData from "../assets/data/userData";
 import fetchReservationHistory from "../assets/data/ReservationHistory";
+import ActiveReservationTable from '../components/UI/resrvationsAl'; // Assuming the component file is in the same directory
 
 import '../styles/contact.css';
 const Dashboard = () => {
+    const reservations = [
+        { id: 1, carName: 'Tesla Model 3', date: '2024-02-08', startTime: '04:00' },
+        { id: 2, carName: 'Toyota Camry', date: '2024-02-11', startTime: '10:30' },
+        { id: 3, carName: 'BMW X5', date: '2024-02-12', startTime: '13:15' },
+    ];
     const [userProfileData, setUserProfileData] = useState([]);
     const [reservationHistory, setReservationHistory] = useState([]);
     const [solde, setSolde] = useState(0);
+   
     useEffect(() => {
         // Access the fetched user data here
         setUserProfileData(userData);
@@ -74,6 +81,12 @@ const Dashboard = () => {
                     </div>
                 </div>
                 </Col>
+                </Row>
+                <Row>
+                <div>
+                    <h1>Active Reservations</h1>
+                    <ActiveReservationTable reservations={reservations}/>
+                </div>
                 </Row>
                 <Container>
                 <Row>

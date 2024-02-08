@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import Helmet from '../components/Helmet/Helmet';
 import CommonSection from '../components/UI/CommonSection';
 import carData from "../assets/data/carData";
-import CarItem from "../components/UI/CarItem";
+import CarItem from "../components/UI/CarItemm";
 import contactImage from '../assets/all-images/cars-img/nissan-offer.png';
 import userData from "../assets/data/userData";
 import fetchReservationHistory from "../assets/data/ReservationHistory";
@@ -41,25 +41,25 @@ const Dashboard = () => {
                 <Row>
                 <Row>
                 <Col lg="6" className="text-center mb-5">
-                    <h6 className="section__subtitle">Welcome</h6>
-                    {userData.map((item) => (
+                    <h6 className="section__subtitle">Welcome admin</h6>
+                   
                        
-                    <h2 className="section__title">{item.sexe === 'female' ? 'Ms' : 'Mr'} {item.username}</h2>
-                    ))}
+                    <h2 className="section__title">Mr. Zakaria</h2>
+                    
                 </Col>
                 
                 <Col lg="6" className="text-center mb-5">
                 {/* Solde Section */}
                 <div className="solde-section">
-                    <h2>Bikes: ${solde}</h2>
+                    <h2>Bikes: 8</h2>
                     <div className="buttons-container">
                     <Button
                         className="car__item-btn car__btn-rent"
                         
-                        onClick={() => window.location.href = '/add-credits'}
+                        onClick={() => window.location.href = '/add-bike'}
                         style={{ marginRight: '10px' }}
                     >
-                        Add Credits
+                        Add Bike
                     </Button>
 
                    
@@ -67,9 +67,18 @@ const Dashboard = () => {
                     <Button
                         className="car__item-btn car__btn-details"
                         color="success"
-                        onClick={() => window.location.href = '/view-transactions'}
+                        onClick={() => window.location.href = '/add-admin'}
                     >
-                        View Transactions
+                        Add admin
+                    </Button>
+                    </div>
+                    <div >
+                    <Button
+                        className="submit-button"
+                        onClick={() => window.location.href = '/add-owner'}
+                        style={{ marginRight: '10px' }}
+                    >
+                        Add Owner
                     </Button>
                     </div>
                 </div>
@@ -78,35 +87,15 @@ const Dashboard = () => {
                 <Container>
                 <Row>
                     <Col lg="12" className="text-center mb-5">
-                    <h6 className="section__subtitle">For you</h6>
-                    <h2 className="section__title">Available bikes</h2>
+                    <h6 className="section__subtitle">All bikes</h6>
                     </Col>
 
-                    {carData.slice(0, 3).map((item) => (
+                    {carData.slice(0, 9).map((item) => (
                     <CarItem item={item} key={item.id} />
                     ))}
                 </Row>
                 {/* Reservation History Section */}
-                <Row>
-                    
-                    
-                    <div className="reservation-history">
-                        <h2>Reservation History</h2>
-                        {reservationHistory.length > 0 ? (
-                        <ul>
-                            {reservationHistory.map((reservation) => (
-                            <li key={reservation.id}>
-                                <p>Car: {reservation.carName}</p>
-                                <p>Date: {reservation.date}</p>
-                                {/* Add more details as needed */}
-                            </li>
-                            ))}
-                        </ul>
-                        ) : (
-                        <p>No reservation history available.</p>
-                        )}
-                    </div>
-                </Row>
+                
                 </Container>
                 </Row>
             </Container>
